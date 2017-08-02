@@ -1,0 +1,344 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"dbr",
+				"dbRefList"
+			],
+			[
+				"dbre",
+				"dbRefList"
+			],
+			[
+				"s",
+				"snap"
+			],
+			[
+				"dbR",
+				"dbRefObject"
+			],
+			[
+				"db",
+				"dbRefList"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"req",
+				"req"
+			],
+			[
+				"par",
+				"parametros"
+			],
+			[
+				"para",
+				"parametros"
+			],
+			[
+				"ur",
+				"url"
+			],
+			[
+				"pa",
+				"param_data"
+			],
+			[
+				"inde",
+				"IndexOf"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"var",
+				"variables"
+			],
+			[
+				"html",
+				"html_string"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/jeperaza/Desktop/Proyectos con Javascript/hola.html",
+			"settings":
+			{
+				"buffer_size": 281,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "(function(){\n\n  // Initialize Firebase\n  var config = {\n    apiKey: \"AIzaSyBKj8YTtva6Ql_yEMyJ8DK4rk5TY0Gy21I\",\n    authDomain: \"juegosdemesa-f6f51.firebaseapp.com\",\n    databaseURL: \"https://juegosdemesa-f6f51.firebaseio.com\",\n    storageBucket: \"juegosdemesa-f6f51.appspot.com\",\n    messagingSenderId: \"417833725150\"\n  };\n  firebase.initializeApp(config);\n\n//Obtener elementos\n  const preObject = document.getElementById('objeto');\n  const ulList = document.getElementById('lista');\n\n\n//Crear Referencias\n  const dbRefObject = firebase.database().ref().child('objeto');\n  const dbRefList = dbRefObject.child('habilidades');\n\n  dbRefObject.on('value', snap => {\n    preObject.innerText = JSON.stringify(snap.val(),null,3);\n  });\n\n  dbRefList.on('child_added',snap => {\n    const li = document.createElement('li');\n    li.innerText = snap.val();\n    li.id = snap.key;\n    ulList.appendChild(li);\n\n  });\n\n  dbRefList.on('child_changed', snap => {\n    const liChanged = document.getElementById('snap.key');\n    liChanged.innerText = snap.val();\n  });\n\n  dbRefList.on('child_removed', snap => {\n    const liToRemove = document.getElementById('snap.key');\n    liToRemove.remove();\n  });\n\n}());",
+			"file": "/C/Users/jeperaza/Desktop/Proyectos con Javascript/app.js",
+			"file_size": 1228,
+			"file_write_time": 131345923809766479,
+			"settings":
+			{
+				"buffer_size": 1188,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/jeperaza/Desktop/Proyectos con Javascript/curso-socket",
+		"/C/Users/jeperaza/Desktop/Proyectos con Javascript/curso-socket/client",
+		"/C/Users/jeperaza/Desktop/Proyectos con Javascript/curso-socket/server"
+	],
+	"file_history":
+	[
+		"/C/Users/jeperaza/Desktop/Proyectos con Javascript/curso-socket/server/index.js",
+		"/C/Users/jeperaza/Desktop/NodeJs/Index.html",
+		"/C/Users/jeperaza/Desktop/NodeJs/params_parser.js",
+		"/C/Users/jeperaza/Desktop/NodeJs/form_params.js",
+		"/C/Users/jeperaza/Desktop/NodeJs/render_var.js",
+		"/C/Users/jeperaza/Desktop/NodeJs/hola_html.js",
+		"/C/Users/jeperaza/Desktop/NodeJs/hello.js",
+		"/C/Users/jeperaza/Desktop/index.html",
+		"/C/Users/jeperaza/Desktop/cssrefresh.js",
+		"/C/Users/jeperaza/Desktop/Polaris 16-11-2016/Polaris/Scripts/app.min.js",
+		"/C/Users/jeperaza/Downloads/xPay_-Sistema-Integrado-de-Gestión-de-Factor-Humano.xml",
+		"/C/Users/jeperaza/Downloads/Gadd97-smartadmin-d587d2949632/webapp/Scripts/app.min.js",
+		"/H/Corinsa Portal/Polaris 14-11-2016/Polaris/Login/css/style.css",
+		"/C/Users/jeperaza/Downloads/Template/material/app/views/material.lists.html",
+		"/C/Users/jeperaza/Downloads/Template/material/master/jade/views/table-uigrid.jade",
+		"/C/Users/jeperaza/Downloads/Template/material/app/views/table-uigrid.html",
+		"/C/Users/jeperaza/Downloads/Template/material/vendor/datatables/media/js/jquery.dataTables.js",
+		"/C/Users/jeperaza/Documents/Polaris 09-11-2016/Polaris/Views/Acount/Login.cshtml",
+		"/C/Users/jeperaza/Downloads/Template/material/master/js/modules/sidebar/sidebar.controller.js",
+		"/C/Users/jeperaza/Downloads/Template/material/master/js/modules/tables/ngtable.controller.js",
+		"/C/Users/jeperaza/Downloads/Template/material/master/js/modules/sidebar/sidebar.directive.js",
+		"/C/Users/jeperaza/Downloads/Template/material/master/js/modules/sidebar/sidebar.module.js",
+		"/C/Users/jeperaza/Downloads/Template/material/master/js/modules/sidebar/sidebar.service.js",
+		"/C/Users/jeperaza/Downloads/Template/material/master/js/modules/sidebar/sidebar.userblock.controller.js",
+		"/C/Users/jeperaza/Downloads/Template/material/index.html",
+		"/C/Users/jeperaza/Downloads/Template/material/vendor/angular-bootstrap-nav-tree/dist/abn_tree_directive.js",
+		"/C/Users/jeperaza/Downloads/Template/material/app/css/theme-a.css"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"toggleShortcut",
+			"show-shortcut",
+			"sidebar-renderer"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/jeperaza/Desktop/Proyectos con Javascript/hola.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/jeperaza/Desktop/Proyectos con Javascript/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1188,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1182,
+								1182
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "curso-sockets.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

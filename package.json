@@ -1,0 +1,20 @@
+{
+  "name": "curso-socket",
+  "version": "1.0.0",
+  "description": "Chat Privado por Medio de NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jose Peraza Koala",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "node-emoji": "^1.5.1",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
